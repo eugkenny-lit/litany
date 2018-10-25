@@ -126,7 +126,7 @@ public class LinkedList<E> implements List<E> {
 
 	@Override
 	public Iterator<E> iterator(){
-		return new ListIterator();
+		return new LinkedListIterator();
 	}
 
 	@Override
@@ -368,7 +368,7 @@ public class LinkedList<E> implements List<E> {
 		}
 	}
 	
-	private class ListIterator implements Iterator<E>{
+	private class LinkedListIterator implements Iterator<E>{
 
 		private Node<E> current = first;
 		
@@ -379,7 +379,7 @@ public class LinkedList<E> implements List<E> {
         
         @Override
         public void remove(){  
-           throw new UnsupportedOperationException(   );
+           throw new UnsupportedOperationException();
         }
         
         @Override																			
